@@ -1,0 +1,31 @@
+{
+  "name": "vite-tool-lib",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "./dist/bigdata-utils.umd.cjs",
+  "module": "./dist/bigdata-utils.js",
+  "_types": "./index.d.ts",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/bigdata-utils.js",
+    "require": "./dist/bigdata-utils.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/numeral": "^2.0.5",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.1"
+  },
+  "peerDependencies": {
+    "numeral": "^2.0.6"
+  }
+}
