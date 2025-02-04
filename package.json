@@ -4,7 +4,7 @@
   "homepage": "TuXunJia.com",
   "description": "a number format tool base on numeral",
   "keywords": ["numeral", "format", "number", "format number", "format number tool"],  
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist",
@@ -15,7 +15,7 @@
   "_types": "./index.d.ts",
   "types": "./types/index.d.ts",
   "exports": {
-    "types": "./index.d.ts",
+    "types": "./types/index.d.ts",
     "import": "./dist/bigdata-utils.js",
     "require": "./dist/bigdata-utils.umd.cjs"
   },
