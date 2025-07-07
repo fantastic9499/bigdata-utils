@@ -2,8 +2,7 @@
  * @Author: TuXunJia
  * @Date: 2025-02-03 00:01:22
  * @LastEditors: TuXunJia
- * @LastEditTime: 2025-02-03 21:16:10
- * @Description:
+ * @LastEditTime: 2025-02-11 18:55:11
  */
 import { defineConfig } from "vite";
 
@@ -15,10 +14,11 @@ export default defineConfig({
 			fileName: "bigdata-utils",
 		},
 		rollupOptions: {
-			external: ["numeral"],
+			external: ["numeral", "js-base64"],
 			output: {
 				globals: {
 					numeral: "numeral",
+					"js-base64": "js-base64",
 				},
 			},
 		},
