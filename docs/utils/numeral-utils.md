@@ -9,7 +9,7 @@ description: 数字格式化相关函数的文档
 
 将数字格式化为带分隔符的金额
 
-**入参**:<br>
+**参数**:<br>
 value: number
 
 **返回值**<br>
@@ -34,10 +34,10 @@ import { getPrice, getPercentage, format, round, ceil, floor} from '../../lib/nu
 
 将数字格式化为百分比
 
-**入参1**:<br>
+**参数1**:<br>
 value: 待格式化数字
 
-**入参2**:<br>
+**参数2**:<br>
 forceFraction: 是否强制格式化为带2位小数
 
 **返回值**<br>
@@ -68,10 +68,10 @@ string
 
 将数字格式化为指定格式
 
-**入参1**:<br>
+**参数1**:<br>
 value: 待格式化数字
 
-**入参2**:<br>
+**参数2**:<br>
 fmt: numeral库支持的格式化字符串
 
 **返回值**<br>
@@ -90,12 +90,12 @@ string
 
 ## roud(value: number, fmt: boolean): string
 
-四舍五入取整，并使用numeral格式化数字(默认格式化数字)
+四舍五入取整，并使用numeral格式化数字
 
-**入参1**:<br>
+**参数1**:<br>
 value: 待格式化数字
 
-**入参2**:<br>
+**参数2**:<br>
 fmt: 是否使用numeral格式化数字，默认值：true
 
 **返回值**<br>
@@ -113,12 +113,12 @@ string
 
 ## ceil(value: number, fmt: boolean): string
 
-向上取整，并格式化数字，默认格式化数字
+向上取整，并格式化数字
 
-**入参1**:<br>
+**参数1**:<br>
 value: 待格式化数字
 
-**入参2**:<br>
+**参数2**:<br>
 fmt: 是否使用numeral格式化数字，默认值：true
 
 **返回值**<br>
@@ -136,12 +136,12 @@ string
 
 ## floor(value: number, fmt: boolean): string
 
-向下取整，并格式化数字，默认格式化数字
+向下取整，并格式化数字
 
-**入参1**:<br>
+**参数1**:<br>
 value: 待格式化数字
 
-**入参2**:<br>
+**参数2**:<br>
 fmt: 是否使用numeral格式化数字，默认值：true
 
 **返回值**<br>

@@ -2,7 +2,7 @@
  * @Author: TuXunJia
  * @Date: 2024-10-23 19:33:46
  * @LastEditors: TuXunJia
- * @LastEditTime: 2025-02-09 20:17:22
+ * @LastEditTime: 2025-07-07 15:52:20
  * @Description: base64编解码
  */
 import { Base64 } from "js-base64";
@@ -28,7 +28,7 @@ export const base64Encode = (input: string | object): string => {
  * @param {string} input
  * @return {*}
  */
-export const base64Decode = (input: string) => {
+export const base64Decode = (input: string): string | object => {
 	if (typeof input !== "string") {
 		throw new Error("base64 - decode: 入参格式错误");
 	}

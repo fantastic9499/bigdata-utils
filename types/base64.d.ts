@@ -11,4 +11,4 @@ export declare const base64Encode: (input: string | object) => string;
  * @param {string} input
  * @return {*}
  */
-export declare const base64Decode: (input: string) => any;
+export declare const base64Decode: (input: string) => string | object;
