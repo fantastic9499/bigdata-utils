@@ -16,7 +16,7 @@ value: number
 string
 
 <script setup>
-import { getPrice, getPercentage, format, round, ceil} from '../../lib/numeral-utils.ts'
+import { getPrice, getPercentage, format, round, ceil, floor} from '../../lib/numeral-utils.ts'
 </script>
 
 **示例**:<br>
@@ -80,12 +80,12 @@ string
 **示例**:<br>
 
 ```vue
-<span style="font-weight: bold">带2为小数：{{ format(1.00, '0,0.00') }}</span>
+<span style="font-weight: bold">带2位小数：{{ format(1.00, '0,0.00') }}</span>
 ```
 
 **输出结果**<br>
 
-<span style="font-weight: bold">百分比：{{ format(1.00, '0,0.00') }}</span>
+<span style="font-weight: bold">带2位小数：{{ format(1.00, '0,0.00') }}</span>
 
 
 ## roud(value: number, fmt: boolean): string
@@ -133,3 +133,26 @@ string
 **输出结果**<br>
 
 <span style="font-weight: bold">向上取整：{{ ceil(98765.4, true) }}</span>
+
+## floor(value: number, fmt: boolean): string
+
+向下取整，并格式化数字，默认格式化数字
+
+**入参1**:<br>
+value: 待格式化数字
+
+**入参2**:<br>
+fmt: 是否使用numeral格式化数字，默认值：true
+
+**返回值**<br>
+string
+
+**示例**:<br>
+
+```vue
+<span style="font-weight: bold">向下取整：{{ floor(98765.9, true) }}</span>
+```
+
+**输出结果**<br>
+
+<span style="font-weight: bold">向下取整：{{ floor(98765.9, true) }}</span>

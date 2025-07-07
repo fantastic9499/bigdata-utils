@@ -2,7 +2,7 @@
  * @Author: TuXunJia
  * @Date: 2023-05-26 12:08:49
  * @LastEditors: TuXunJia
- * @LastEditTime: 2025-07-07 09:49:55
+ * @LastEditTime: 2025-07-07 10:33:30
  * @Description: 使用numeral做数字或金额转换
  */
 import numeral from "numeral";
@@ -100,5 +100,24 @@ export const ceil = (value: number, fmt = true): string => {
 		return numeral(Math.ceil(value)).format(`0,0`);
 	} else {
 		return Math.ceil(value).toString();
+	}
+};
+
+/**
+ * @description: 向下取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 10:33:30
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
+ */
+export const floor = (value: number, fmt = true): string => {
+	if (value !== 0 && (!value || typeof value !== "number")) {
+		return "";
+	}
+
+	if (fmt) {
+		return numeral(Math.floor(value)).format(`0,0`);
+	} else {
+		return Math.floor(value).toString();
 	}
 };
