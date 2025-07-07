@@ -1,10 +1,16 @@
 {
   "name": "@yf-bigdata/bigdata-utils",
   "author": "TuXunJia",
-  "homepage": "TuXunJia.com",
+  "homepage": "https://github.com/fantastic9499/bigdata-utils",
   "description": "a number format tool base on numeral",
-  "keywords": ["numeral", "format", "number", "format number", "format number tool"],  
-  "version": "0.1.1",
+  "version": "0.1.5",
+  "keywords": [
+    "numeral",
+    "format",
+    "number",
+    "format number",
+    "format number tool"
+  ],
   "type": "module",
   "files": [
     "dist",
@@ -12,7 +18,7 @@
   ],
   "main": "./dist/bigdata-utils.umd.cjs",
   "module": "./dist/bigdata-utils.js",
-  "_types": "./index.d.ts",
+  "-types": "./index.d.ts",
   "types": "./types/index.d.ts",
   "exports": {
     "types": "./types/index.d.ts",
@@ -21,14 +27,25 @@
   },
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 3008",
-    "build": "tsc && vite build"
+    "build": "NODE_ENV=production tsc && vite build --mode production",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^22.13.1",
     "@types/numeral": "^2.0.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "storybook": "^8.5.3",
+    "terser": "^5.43.1",
     "typescript": "~5.7.2",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-compression2": "^2.2.0",
+    "vitepress": "^1.6.3"
   },
   "peerDependencies": {
+    "js-base64": "^3.7.7",
     "numeral": "^2.0.6"
   }
 }

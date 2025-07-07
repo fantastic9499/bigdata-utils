@@ -2,7 +2,7 @@
  * @Author: TuXunJia
  * @Date: 2023-05-26 12:08:49
  * @LastEditors: TuXunJia
- * @LastEditTime: 2024-09-29 08:27:04
+ * @LastEditTime: 2025-07-07 10:33:30
  * @Description: 使用numeral做数字或金额转换
  */
 import numeral from "numeral";
@@ -50,42 +50,74 @@ export const getPrice = (price: number): string => {
 	}
 };
 
-export const formatPrice = (price: number, fmt: string): string => {
-	if (price !== 0 && (!price || typeof price !== "number")) {
+/**
+ * @description: 将数字格式化为指定格式
+ * @Date: 2025-07-07 09:44:30
+ * @param {number} price
+ * @param {string} fmt
+ * @return {string}
+ */
+export const format = (value: number, fmt: string): string => {
+	if (value !== 0 && (!value || typeof value !== "number")) {
 		return "";
 	}
 
-	return numeral(price).format(fmt);
+	return numeral(value).format(fmt);
 };
 
 /**
- * 价格，四舍五入取整
- * @param fmt 是否格式化
+ * @description: 四舍五入取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 09:49:50
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
  */
-export const roundPrice = (price: number, fmt = true): string => {
-	if (price !== 0 && (!price || typeof price !== "number")) {
+export const round = (value: number, fmt = true): string => {
+	if (value !== 0 && (!value || typeof value !== "number")) {
 		return "";
 	}
 
 	if (fmt) {
-		return numeral(Math.round(price)).format(`0,0`);
+		return numeral(Math.round(value)).format(`0,0`);
 	} else {
-		return Math.round(price).toString();
+		return Math.round(value).toString();
 	}
 };
 
 /**
- * 价格，向上取整
- * @param fmt 是否格式化
+ * @description: 向上取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 09:49:50
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
  */
-export const ceilPrice = (price: number, fmt = true): string => {
-	if (price !== 0 && (!price || typeof price !== "number")) {
+export const ceil = (value: number, fmt = true): string => {
+	if (value !== 0 && (!value || typeof value !== "number")) {
 		return "";
 	}
 
 	if (fmt) {
-		return numeral(Math.ceil(price)).format(`0,0`);
+		return numeral(Math.ceil(value)).format(`0,0`);
 	} else {
-		return Math.ceil(price).toString();
+		return Math.ceil(value).toString();
+	}
+};
+
+/**
+ * @description: 向下取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 10:33:30
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
+ */
+export const floor = (value: number, fmt = true): string => {
+	if (value !== 0 && (!value || typeof value !== "number")) {
+		return "";
+	}
+
+	if (fmt) {
+		return numeral(Math.floor(value)).format(`0,0`);
+	} else {
+		return Math.floor(value).toString();
 	}
 };

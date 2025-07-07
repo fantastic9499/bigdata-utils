@@ -13,14 +13,35 @@ export declare const getPercentage: (percentage: number, forceFraction?: boolean
  * @return {string}
  */
 export declare const getPrice: (price: number) => string;
-export declare const formatPrice: (price: number, fmt: string) => string;
 /**
- * 价格，四舍五入取整
- * @param fmt 是否格式化
+ * @description: 将数字格式化为指定格式
+ * @Date: 2025-07-07 09:44:30
+ * @param {number} price
+ * @param {string} fmt
+ * @return {string}
  */
-export declare const roundPrice: (price: number, fmt?: boolean) => string;
+export declare const format: (value: number, fmt: string) => string;
 /**
- * 价格，向上取整
- * @param fmt 是否格式化
+ * @description: 四舍五入取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 09:49:50
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
  */
-export declare const ceilPrice: (price: number, fmt?: boolean) => string;
+export declare const round: (value: number, fmt?: boolean) => string;
+/**
+ * @description: 向上取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 09:49:50
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
+ */
+export declare const ceil: (value: number, fmt?: boolean) => string;
+/**
+ * @description: 向下取整，并格式化数字，默认格式化数字
+ * @Date: 2025-07-07 10:33:30
+ * @param {number} value
+ * @param {boolean} fmt
+ * @return {string}
+ */
+export declare const floor: (value: number, fmt?: boolean) => string;
